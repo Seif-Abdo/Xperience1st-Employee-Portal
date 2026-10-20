@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xperience1st Employee Portal</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-[#6C47C9] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Xperience1st Hosted AI Chatbot Widget (Loaded via script path) -->
+    <script id="xperience-chatbot-widget-script">
+      (function() {
+        const backendUrl = '%VITE_CHATBOT_URL%' || 'http://localhost:5001';
+        const s = document.createElement('script');
+        s.src = backendUrl + '/widget.js';
+        s.setAttribute('data-backend-url', backendUrl);
+        s.defer = true;
+        document.body.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>
